@@ -1,0 +1,7 @@
+// Grid Columns
+@mixin grid-col($cols, $grid-columns, $gutter)
+  box-sizing: border-box
+  flex: 0 0 col-width($cols, $grid-columns, $gutter)
+  margin-left: $gutter
+  margin-right: $gutter
+  // border: 1px solid darken($red, 20%)

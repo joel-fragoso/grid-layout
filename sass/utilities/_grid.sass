@@ -1,0 +1,22 @@
+// Grid Layout
+.container,
+.container-fluid
+  min-height: 1px
+  margin: 0 auto
+
+.container
+  width: 75em
+
+.container-fluid
+  width: 100%
+
+.grid
+  box-sizing: border-box
+  display: flex
+
+@for $i from 1 through $default-grid-columns
+  .col-#{$i}
+    @include grid-col($cols: $i, $grid-columns: $default-grid-columns, $gutter: $default-grid-gutter)
+
+  .offset-#{$i}
+    margin-left: offset-margin-left($cols: $i, $grid-columns: $default-grid-columns, $gutter: $default-grid-gutter) !important

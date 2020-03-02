@@ -1,0 +1,7 @@
+// Calculate Column Width
+@function col-width($cols, $grid-columns: 12, $gutter: 1%)
+  @return (((100% / $grid-columns) - (($gutter * 2) / $cols)) * $cols)
+
+// Calculete Offset Margin-Left
+@function offset-margin-left($cols, $grid-columns: 12, $gutter: 1%)
+  @return (((100% / $grid-columns) + ($gutter / $cols)) * $cols)

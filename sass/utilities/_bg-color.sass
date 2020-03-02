@@ -1,0 +1,10 @@
+@mixin bg-color($color)
+  background-color: $color
+  @if lightness($color) < 50
+    color: $white
+  @else 
+    color: $black
+
+@each $key, $color in $themes
+  .bg-#{$key}
+    @include bg-color($color)
